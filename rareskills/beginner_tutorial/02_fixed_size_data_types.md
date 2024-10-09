@@ -63,7 +63,8 @@ Note that the 40 characters do not include the leading 0x.
 With the example from the article I'm getting this error in Remix:
 
 ```
-SyntaxError: This looks like an address but has an invalid checksum. Correct checksummed address: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045". If this is not used as an address, please prepend '00'.
+SyntaxError: This looks like an address but has an invalid checksum. Correct checksummed address:
+"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045". If this is not used as an address, please prepend '00'.
 ```
 
 Original vs 'checksummed' address (the last one has uppercase letters):
