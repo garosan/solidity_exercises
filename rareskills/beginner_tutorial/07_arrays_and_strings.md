@@ -92,7 +92,7 @@ contract ExampleContract {
 
 If the function is passed an array of any size other than 5, it will revert.
 
-### Strings
+## Strings
 
 Strings behave very similar to arrays. In fact, they are arrays under the hood (but with some differences). Here is a function that returns the string you passed it.
 
@@ -106,5 +106,50 @@ contract ExampleContract {
     }
 }
 ```
+
+### Concatenating strings
+
+Funnily enough, solidity did not support string concatenation until February 2022 when Solidity 0.8.12 was released. If you want to do string concatenation in Solidity, make sure the pragma at the top of the file is at least 0.8.12.
+
+This how you would concatenate in Solidity:
+
+```solidity
+pragma solidity ^0.8.12;
+contract ExampleContract {
+    function useArrays(string calldata user)
+        public
+        pure
+        returns(string memory) {
+            return string.concat("hello ", user);
+    }
+}
+```
+
+There is a reason support for concatenation was added so late, smart contracts usually deal with numbers, not strings.
+
+### Strings cannot be indexed
+
+In languages like JavaScript or Python, you can index a string like you would an array and get a character back. Solidity cannot do this. The following code won’t compile:
+
+```solidity
+pragma solidity ^0.8.12;
+contract BadContract {
+    function useArrays(string calldata input)
+        public
+        pure
+        returns(string memory) {
+            return input[0]; // error
+    }
+}
+```
+
+### Strings do not support length
+
+This is because unicode characters can make the length ambiguous, and solidity represents strings as a byte array, not a sequence of characters. So just remember you can't call `.length` on a string.
+
+### Keep in mind for later
+
+- Arrays in Solidity support operations like `pop()`, but this has side-effects which are more advanced, so we will teach this later.
+- Declaring arrays and strings inside a function, as opposed to in the argument or return value, has a different syntax.
 
 [Original Article](https://www.rareskills.io/learn-solidity/arrays)
