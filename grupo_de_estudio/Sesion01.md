@@ -12,6 +12,8 @@ O incluso [ésta herramienta todavía más sencilla](https://www.pythonmorsels.c
 
 ## ¿Qué es un lenguaje de programación?
 
+Un lenguaje de programación es una manera de decirle a las computadoras qué hacer. Así como los humanos usamos palabras para comunicarnos entre nosotros, como programadores usamos palabras especiales y reglas en estos lenguajes para escribir instrucciones que la computadora puede entender y seguir. Cada lenguaje tiene sus propias reglas y maneras de escribir esas instrucciones, pero el objetivo siempre es el mismo: hacer que la computadora haga cosas, como mostrar una página web, hacer cálculos, o controlar un juego.
+
 ## Tipos de datos
 
 ¿Qué son los tipos de datos?
