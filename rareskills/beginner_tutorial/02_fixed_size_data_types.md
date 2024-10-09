@@ -79,7 +79,7 @@ Let’s revisit uint256. The u means unsigned. It cannot represent negative numb
 This is the biggest number that can fit in a uint256:
 If you just change the last 5 to 6 you'll get an error.
 
-```
+```solidity
 function getBiggestNumber()
     public
     pure
